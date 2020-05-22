@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,700;1,300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6de5d1dec8.js" ></script>
+    <link rel="stylesheet" href="estilos.css" type="text/css">
+    <link rel="shortcut icon" href="./img/play.png">
+    <title>Choice Board - Nivel Inicial</title>
+</head>
+<body>
+
+
+    <div class="contenedor">
+        <div class="recordar" id="recordar">
+            <p><i>PARA RECORDAR</i></p>
+            <audio id="audiorecordar" controls>
+                <source type="audio/wav" src="pulso.mp3">
+            </audio>
+
+        </div>
+        <header>
+            <div class="titulo">
+                <h1>MUSIC CHOICE BOARD - NIVEL INICIAL</h1>
+            </div>
+            <div class="play" id="play">
+                <img src="./img/play.png" class="img-play">
+            </div>
+            <audio id="audio" controls>
+                <source type="audio/wav" src="audio.mp3">
+            </audio>
+            
+        </header>
+
+        <section class="grid" id="grid" >
+            <div class="item"
+                 data-categoria="vaca" 
+            >
+                <div class="item-contenido rojo">
+                    <a href="./vaca.html" target="_blank" ><img src="img/vaca.png"></a>
+                </div>
+            </div>
+            <div class="item"
+                 data-categoria="soldado"
+            >
+                <div class="item-contenido verde">
+                    <a href="./soldado.html" target="_blank" ><img src="img/soldier.png"></a>
+                </div>
+            </div>
+            <div class="item"
+                 data-categoria="arroz"
+            >
+                <div class="item-contenido amarillo">
+                   <a href="./arroz.html" target="_blank" ><img src="img/arroz.png"></a>
+                </div>
+            </div>
+            <div class="item"
+                 data-categoria="gallo" 
+            >
+                <div class="item-contenido azul">
+                    <a href="./gallo.html" target="_blank" ><img src="img/gallo.png"></a>
+                </div>
+            </div>
+            
+        </section>
+
+
+        <footer class="contenedor">
+            <div class="creado-por">
+                <p>Sitio diseñado por <a href="#">Mateo Ríos</a> - <a href="https://mateo903.github.io/Portafolio/" target="_blank">Sitio Web</a> </p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="https://unpkg.com/web-animations-js@2.3.2/web-animations.min.js"></script>
+    <script src="https://unpkg.com/muuri@0.8.0/dist/muuri.min.js"></script>
+    <script src="main.js"></script>
+
+</body>
+</html>

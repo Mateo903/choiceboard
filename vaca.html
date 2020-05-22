@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La vaca Lola</title>
+    <link rel="shortcut icon" href="./img/vaca.png">
+    <style type="text/css">
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+        body{ background: #e64444;font-family: 'Open Sans', sans-serif;}
+        
+        .contenedor {
+            width: 90%;
+            max-width: 800px;
+            margin: auto;
+        }
+        a {
+    text-decoration: none;
+}
+
+
+
+        header{
+            display: flex;
+            padding: 40px 0px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        header .titulo{
+            padding: 0px 20px;
+            color: #1f1f1f;
+        }
+
+        header .play{
+            display: block;
+            margin: 40px 0px;
+            cursor: pointer;
+        }
+
+
+        header .img-play{
+            width: 50%;
+            height: 50%;
+            padding: 10px;
+            border-radius: 50%;
+            transition: 2s;
+        }
+
+
+        #audio{
+            display: none;
+            }
+
+        .letra{
+            text-align: center;
+        }
+        .letra p{
+            font-size: 50px;
+        }
+        footer .creado-por{
+            margin: 40px 0px;
+            text-align: center;
+            font-size: 14px;
+            color: #1f1f1f;
+        }
+
+        footer .creado-por a {color: #000;}
+        footer .creado-por a:hover {text-decoration: underline;}
+    </style>
+    
+</head>
+<body>
+
+    <div class="contenedor">
+        <header>
+            <div class="titulo">
+                <h1>MUSIC CHOICE BOARD - NIVEL INICIAL</h1>
+            </div>
+            <div class="play" id="play">
+                <img src="./img/play.png" class="img-play">
+            </div>
+            <audio id="audio" controls>
+                <source type="audio/wav" src="vaca.mp3">
+                </audio>
+        </header>
+
+        <section class="letra" id="letra">
+
+            <p>
+                La <b>va</b>ca <b>lo</b>la <br>La <b>va</b>ca <b>lo</b>la<br>
+                <b>Tie</b>ne ca<b>be</b>za y <b>tie</b>ne <b>co</b>la <br>
+                La <b>va</b>ca <b>lo</b>la <br>La <b>va</b>ca <b>lo</b>la<br>
+                <b>Tie</b>ne ca<b>be</b>za y <b>tie</b>ne <b>co</b>la <br>
+                Y <b>ha</b>ce <b>MU</b>
+            </p>
+
+        </section>
+        <footer class="contenedor">
+            <div class="creado-por">
+                <p>Sitio diseñado por <a href="#">Mateo Ríos</a> - <a href="https://mateo903.github.io/Portafolio/" target="_blank">Sitio Web</a> </p>
+            </div>
+        </footer>
+
+    </div>
+
+    
+</body>
+<script>
+    const audio = document.getElementById('audio');
+
+    const play = document.getElementById('play');
+    play.addEventListener('click', (e) => { 
+        audio.paused ? audio.play(): audio.pause();
+    });
+</script>
+</html>

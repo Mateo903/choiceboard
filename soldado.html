@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soldado soy de Jesús</title>
+    <link rel="shortcut icon" href="./img/soldier.png">
+    <style type="text/css">
+        * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+        body{ background: #03b306;font-family: 'Open Sans', sans-serif;}
+        
+        .contenedor {
+            width: 90%;
+            max-width: 800px;
+            margin: auto;
+        }
+        a {
+    text-decoration: none;
+}
+
+
+
+        header{
+            display: flex;
+            padding: 40px 0px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        header .titulo{
+            padding: 0px 20px;
+            color: #1f1f1f;
+        }
+
+        header .play{
+            display: block;
+            margin: 40px 0px;
+            cursor: pointer;
+        }
+
+
+        header .img-play{
+            width: 50%;
+            height: 50%;
+            padding: 10px;
+            border-radius: 50%;
+            transition: 2s;
+        }
+
+
+        #audio{
+            display: none;
+            }
+
+        .letra{
+            text-align: center;
+        }
+        .letra p{
+            font-size: 50px;
+        }
+        footer .creado-por{
+            margin: 40px 0px;
+            text-align: center;
+            font-size: 14px;
+            color: #1f1f1f;
+        }
+
+        footer .creado-por a {color: #000;}
+        footer .creado-por a:hover {text-decoration: underline;}
+    </style>
+    
+</head>
+<body>
+
+    <div class="contenedor">
+        <header>
+            <div class="titulo">
+                <h1>MUSIC CHOICE BOARD - NIVEL INICIAL</h1>
+            </div>
+            <div class="play" id="play">
+                <img src="./img/play.png" class="img-play">
+            </div>
+            <audio id="audio" controls>
+                <source type="audio/wav" src="soldado.mp3">
+                </audio>
+        </header>
+
+        <section class="letra" id="letra">
+
+            <p>
+                <b>Aun</b>que no <b>mar</b>che en <br>
+                <b>la in</b>fante<b>ría</b>,<br>
+                <b>ca</b>balle<b>ría</b> o <br>
+                <b>ar</b>tille<b>ría</b>,<br>
+                <b>Aun</b>que en a<b>vión</b> no <br>
+                <b>va</b>lla vo<b>lan</b>do, <br>
+                <b>se</b> que sol<b>da</b>do <b>soy</b><br>
+                Sol<b>da</b>do <b>soy</b> de Je<b>sús,</b><br>
+                Sol<b>da</b>do <b>soy</b> de Je<b>sús</b><br>
+                <b>Aun</b>que no <b>mar</b>che en <br>
+                <b>la in</b>fante<b>ría</b>,<br>
+                <b>ca</b>balle<b>ría</b> o <br>
+                <b>ar</b>tille<b>ría</b>,<br>
+                <b>Aun</b>que en a<b>vión</b> no <br>
+                <b>va</b>lla vo<b>lan</b>do, <br>
+                <b>se</b> que sol<b>da</b>do <b>soy</b><br>
+            </p>
+
+        </section>
+        <footer class="contenedor">
+            <div class="creado-por">
+                <p>Sitio diseñado por <a href="#">Mateo Ríos</a> - <a href="https://mateo903.github.io/Portafolio/" target="_blank">Sitio Web</a> </p>
+            </div>
+        </footer>
+
+    </div>
+
+    
+</body>
+<script>
+    const audio = document.getElementById('audio');
+
+    const play = document.getElementById('play');
+    play.addEventListener('click', (e) => { 
+        audio.paused ? audio.play(): audio.pause();
+    });
+</script>
+</html>
